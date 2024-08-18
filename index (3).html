@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>
+        <div class="cookie-banner">
+            <p>This site uses cookies to personalize content and ads, provide social media features, and analyze our traffic. By clicking Accept, you agree to the use of cookies. For more information, please visit our Cookie Policy. <a href="" target="_blank">Cookie Policy</a></p>
+            <button onclick="closePopup()">Accept</button>
+            <button onclick="closePopup()">Close</button>
+        </div>
+        <script>
+            function closePopup() {
+                document.querySelector('.cookie-banner').style.display = 'none';
+                document.dispatchEvent(new Event('closePopup'));
+            }
+
+            document.addEventListener('closePopup', function() {
+                window.location.href = '';
+            });
+        </script>
+    </body></html>
